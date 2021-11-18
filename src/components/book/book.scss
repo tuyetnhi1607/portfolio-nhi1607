@@ -1,0 +1,183 @@
+.book{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2rem;
+    margin-top: 4rem;
+    height: 85vh;
+    width: 70vw;
+    &-cover{
+        position: absolute;
+        background-color: #1adfc162;
+        z-index: -10;
+        width: 50%;
+        height: 100%;
+        border-top-left-radius: 2rem;
+        border-bottom-left-radius:2rem;
+        &.right{
+            left: 50%;
+            transform: rotate(180deg);
+        }
+    }
+    &-page{
+        position: absolute;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+        perspective: 2000px;
+        &-first{
+            box-shadow: -8px 0px 6px 0px rgba(7, 1, 1, 0.281),
+                    inset -8px 0px 20px 0px #030c2b;
+            width: 50%;
+            background-color: #061032;
+            height: 100%;
+            padding: 5rem 5rem;
+        }
+        &-item{
+            box-shadow: 8px 0px 6px 0px rgba(7, 1, 1, 0.281),
+                    inset 8px 0px 20px 0px #030c2b;
+            position: absolute;
+            width: calc(50% - 2rem);
+            height: calc(100% - 4rem);
+            left: 50%;
+            top: 2rem;
+            background-color: #061032;
+            transform-style: preserve-3d;
+            transform: rotateY(-180deg);
+            transition: transform 1s linear;
+            transform-origin: 0% 0%;
+            
+            &.turn{
+                transform: rotateY(0deg);
+            }
+            &-font{
+                transform: rotateY(0deg);
+                position: absolute;
+                backface-visibility: hidden;
+                width: 100%;
+            }
+            &-back{
+                transform: rotateY(-180deg);
+                position: absolute;
+                width: 100%;
+                backface-visibility: hidden;
+            }
+        }
+    }
+}
+
+.content-info{
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='100%' width='100%'><text x='0' y='0' fill='rgba(155, 155, 155, 0.1)' font-size='200' font-weight='1000'>info!</text></svg>");
+    background-repeat: no-repeat;
+    overflow: hidden;
+    & > * ~ *{
+        margin-top: 3rem; 
+    }
+    & > img{
+        background-color: rgb(161, 5, 52);
+        height: 13rem;
+        width: auto;
+        border-radius: 1.5rem;
+    }
+    & > h1{
+        color: #09fdd8;
+        font-size: 4rem;
+        font-weight: 1000;
+    }
+    & .list-icon{
+        & > *~*{
+                margin-left: 1rem;
+            }
+        & > i{
+           
+            font-size: 3.5rem;
+            &:nth-child(1){
+                color: #003cff
+            }
+            &:nth-child(2){
+                color: #ffffff
+            }
+            &:nth-child(3){
+                color: #fffb24
+            }
+            
+            &:hover{
+                animation: identifier .5s linear;
+            }
+            @keyframes identifier {
+                0%{
+                    transform: scale(1);
+                }
+                50%{
+                    transform: scale(1.5);
+                }
+                100%{
+                    transform: scale(1);
+                }
+                
+            }
+        }
+    }
+    & > h2{
+        color: #fff;
+        font-size: 2.5rem;
+        font-weight: 400;
+        // letter-spacing: .1rem;
+        &::before{
+            content: "<intro> ";
+            color: #868686;
+        }
+        &::after{
+            content: " </intro>";
+            color: #868686;
+        }
+    }
+}
+
+.content-2{
+    margin: 4rem;
+    text-align: left;
+    color: #fff;
+    font-size: 130%;
+    & > h1{
+        color: #09fdd8;
+        font-size: 3.5rem;
+    }
+    & > h3{
+        font-size: 2.5rem;
+    }
+    & > p{
+        font-size: 2rem;
+    }
+    .time{
+        display: inline;
+        float: right;
+        color:rgb(5, 112, 161);
+        font-size: 1.8rem;
+    }
+}
+.content-3{
+    margin: 4rem;
+    text-align: left;
+    color: #fff;
+    font-size: 130%;
+    & > h1{
+        color: #09fdd8;
+        font-size: 4rem;
+    }
+    & > h3{
+        font-size: 2.5rem;
+    }
+    & > p{
+        font-size: 3rem;
+        color: rgb(88, 88, 88);
+    }
+    .time{
+        display: inline;
+        float: right;
+        color:rgb(5, 112, 161);
+        font-size: 2rem;
+    }
+ 
+}

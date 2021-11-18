@@ -1,0 +1,27 @@
+.background{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(to bottom,  #061032 1%,#2A50DC 50%, #fff 100%);
+    
+    &-cloud{
+        height: 100%;
+        opacity: 0.2;
+        background: url(https://static.radulescu.me/examples/clouds/clouds1000.png) 0 200px,
+                    url(https://static.radulescu.me/examples/clouds/clouds1200_1.png) 0 300px,
+                    url(https://static.radulescu.me/examples/clouds/clouds1000_blur3.png) 100px 250px;
+        animation: windy 20s linear infinite;
+    }
+    @keyframes windy {
+        0% {
+            background-position: 0 200px, 0 300px, 100px 250px;
+          }
+          50% {
+            background-position: 500px 150px, 600px 400px, 550px 350px;
+          }
+          100% {
+            background-position: 1000px 200px, 1200px 300px, 1100px 250px;
+          }
+    }
+}
