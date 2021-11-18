@@ -2,7 +2,30 @@ import React, { useRef, useEffect } from "react";
 import "./book.scss";
 import avatar from "../../assets/nhi.png";
 import "boxicons";
-import TabCloud from "../TabCloud/TabCloud";
+import {TagCloud} from "react-tagcloud";
+
+const data = [
+    { value: 'MongoDB', count: 18 },
+    { value: 'JavaScript', count: 38 },
+    { value: 'React', count: 30 },
+    { value: 'HTML5', count: 10 },
+    { value: 'CSS3', count: 30 },
+    { value: 'MongoDB', count: 22 },
+    { value: 'Ant Design', count: 7 },
+    { value: 'Material-UI', count: 25 },
+    { value: 'Github', count: 32 },
+    { value: 'Linux', count: 17 },
+    { value: 'MongoDB', count: 10},
+    { value: 'JavaScript', count: 18 },
+    { value: 'React', count: 40 },
+    { value: 'HTML5', count: 30 },
+    { value: 'CSS3', count: 14 },
+    { value: 'MongoDB', count: 40 },
+    { value: 'Ant Design', count: 20 },
+    { value: 'Material-UI', count: 12 },
+    { value: 'Github', count: 7 },
+    { value: 'Linux', count:30 },
+]
 
 function Book() {
   useEffect(() => {
@@ -100,12 +123,21 @@ function Book() {
                 Github, <br />
                 Linux.
               </h3>
+              <div className="cloud">
+                <TagCloud
+                    minSize={12}
+                    maxSize={40}
+                    tags={data}
+                    className="simple-cloud"
+                />
             </div>
+            </div>
+            
           </div>
         </div>
         <div className="book-page-item turn" id="2">
           <div className="book-page-item-font">
-            <TabCloud />
+                
           </div>
           <div className="book-page-item-back">
             <h1>Back2</h1>

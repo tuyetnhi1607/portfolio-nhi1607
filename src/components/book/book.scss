@@ -158,9 +158,11 @@
     }
 }
 .content-3{
+    position: relative;
     margin: 4rem;
     text-align: left;
     color: #fff;
+  
     font-size: 130%;
     & > h1{
         color: #09fdd8;
@@ -179,5 +181,11 @@
         color:rgb(5, 112, 161);
         font-size: 2rem;
     }
- 
+}
+
+.cloud{
+    background-color: rgb(219, 26, 26);
+    width: 70%;
+    position: absolute;
+    right: 0;
 }
