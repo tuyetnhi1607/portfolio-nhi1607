@@ -9,6 +9,6 @@
 }
 
 html{
-  font-size: 64.5%;
+  font-size: calc(0.3*(1vh + 1.2vw));
 }
 
