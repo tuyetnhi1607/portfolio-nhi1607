@@ -2,8 +2,9 @@ import React, { useRef, useEffect } from "react";
 import "./book.scss";
 import avatar from "../../assets/nhi.png";
 import "boxicons";
-import video1 from "../../assets/video1.mp4"
-import video2 from "../../assets/video2.mp4"
+import video1 from "../../assets/video1.mp4";
+import video2 from "../../assets/video2.mp4";
+import video3 from "../../assets/video3.mp4";
 
 function Book() {
   useEffect(() => {
@@ -12,11 +13,11 @@ function Book() {
       el.style.zIndex = 20 - index;
       console.log("el", el, index);
       el.onclick = (e) => {
-        let videos = document.querySelectorAll('video')
+        let videos = document.querySelectorAll("video");
 
         videos.forEach((el_1) => {
-            el_1.pause()
-        })
+          el_1.pause();
+        });
         if (el.classList.contains("turn")) {
           el.classList.remove("turn");
           setTimeout(() => {
@@ -28,23 +29,22 @@ function Book() {
         }
       };
     });
-    let videos = document.querySelectorAll('video')
+    let videos = document.querySelectorAll("video");
 
     videos.forEach((el) => {
-        el.onplay = () => {
-            videos.forEach((el_1) => {
-                if (el === el_1) {
-                    el.play()
-                } else {
-                    el_1.pause()
-                }
-            })
-        }
-    })
-    
-    //open book
+      el.onplay = () => {
+        videos.forEach((el_1) => {
+          if (el === el_1) {
+            el.play();
+          } else {
+            el_1.pause();
+          }
+        });
+      };
+    });
 
-  },[]);
+    //open book
+  }, []);
 
   return (
     <div className="book">
@@ -109,22 +109,11 @@ function Book() {
               <h1>Skills</h1>
               <br />
               <p> Have basic knowledge of front end:</p>
-              <h3>
-                HTML,
-                CSS, 
-                JavaScript, 
-                ReactJS.
-              </h3>
+              <h3>HTML, CSS, JavaScript, ReactJS.</h3>
               <br />
               <p> Worked with:</p>
-              <h3>
-                Ant-Design, 
-                Material-UI,
-               MongoDB, 
-                Github, 
-                Linux.
-              </h3>
-              <br /> <br/>
+              <h3>Ant-Design, Material-UI, MongoDB, Github, Linux.</h3>
+              <br /> <br />
               <h1>Experiences</h1>
               <br />
               <p>Worked as a trainee</p>
@@ -150,11 +139,11 @@ function Book() {
               <video width="100%" height="auto" controls>
                 <source src={video2} type="video/mp4" />
               </video>
-              <h1>Food Order Website 1</h1>
+              <h1>Food Order Website</h1>
               <h2>
                 This is a simple project I write in HTML, CSS, React JS. This
                 project helps me practice layout, animation, and especially
-                Responsive.
+                responsive.
               </h2>
               <div>
                 <i class="bx bx-link"></i>
@@ -174,11 +163,12 @@ function Book() {
                 <source src={video1} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-              <h1>Food Order Website2</h1>
+              <h1>Website Watch Movie Online</h1>
               <h2>
-                This is a simple project I write in HTML, CSS, React JS. This
-                project helps me practice layout, animation, and especially
-                Responsive.
+                This is simple project, I wrote it in HTML, CSS, JavaScript,
+                React JS. In addition to making simple interfaces such as
+                slides, layouts, responsive. I also use the Axios library to get
+                data from the TMDB mock API.
               </h2>
               <div>
                 <i class="bx bx-link"></i>
@@ -197,14 +187,11 @@ function Book() {
           <div className="book-page-item-font">
             <div className="demo-wrapper">
               <video width="100%" height="auto" controls>
-                <source src={video2} type="video/mp4" />
+                <source src={video3} type="video/mp4" />
               </video>
-              <h1>Food Order Website3</h1>
+              <h1>Website CMS</h1>
               <h2>
-                This is a simple project I write in HTML, CSS, React JS. This
-                project helps me practice layout, animation, and especially
-                Responsive.
-              </h2>
+In this project, I have designed a CMS website. I made a small backend project myself from NodeJS, MongoDB, ExpressJS to create API with Login, Register, Logout, and product CRUD functions. In the frontend, I use ReactJS, Redux to create layouts like login, register, dashboard, product crud</h2>
               <div>
                 <i class="bx bx-link"></i>
                 <a
@@ -217,79 +204,9 @@ function Book() {
               </div>
             </div>
           </div>
-          <div className="book-page-item-back">
-            <div className="demo-wrapper">
-              <video width="100%" height="auto" controls>
-                <source src={video1} type="video/mp4" />
-              </video>
-              <h1>Food Order Website4</h1>
-              <h2>
-                This is a simple project I write in HTML, CSS, React JS. This
-                project helps me practice layout, animation, and especially
-                Responsive.
-              </h2>
-              <div>
-                <i class="bx bx-link"></i>
-                <a
-                  target="_blank"
-                  cursor="alias"
-                  rel="noreferrer"
-                  href="https://blooming-woodland-27991.herokuapp.com/"
-                >
-                  https://blooming-woodland-27991.herokuapp.com/
-                </a>
-              </div>
-            </div>
-          </div>
+          
         </div>
-        <div className="book-page-item turn" id="4">
-          <div className="book-page-item-font">
-            <div className="demo-wrapper">
-              <video width="100%" height="auto" controls>
-                <source src={video2} type="video/mp4" />
-              </video>
-              <h1>Food Order Website5</h1>
-              <h2>
-                This is a simple project I write in HTML, CSS, React JS. This
-                project helps me practice layout, animation, and especially
-                Responsive.
-              </h2>
-              <div>
-                <i class="bx bx-link"></i>
-                <a
-                  target="_blank"
-                  rel="noreferrer"
-                  href="https://blooming-woodland-27991.herokuapp.com/"
-                >
-                  https://blooming-woodland-27991.herokuapp.com/
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="book-page-item-back">
-            <div className="demo-wrapper">
-              <video width="100%" height="auto" controls>
-                <source src={video1} type="video/mp4" />
-              </video>
-              <h1>Food Order Website6</h1>
-              <h2>
-                This is a simple project I write in HTML, CSS, React JS. This
-                project helps me practice layout, animation, and especially
-                Responsive.
-              </h2>
-              <div>
-                <i class="bx bx-link"></i>
-                <a
-                  target="_blank"
-                  rel="noreferrer"
-                  href="https://blooming-woodland-27991.herokuapp.com/"
-                >
-                  https://blooming-woodland-27991.herokuapp.com/
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+      
         <div className="book-page-last">
           <div className="contacts-wrapper">
             <h1>Contact me</h1>
