@@ -2,9 +2,9 @@ import React, { useRef, useEffect } from "react";
 import "./book.scss";
 import avatar from "../../assets/nhi.png";
 import "boxicons";
-import video1 from "../../assets/video1.mp4";
-import video2 from "../../assets/video2.mp4";
-import video3 from "../../assets/video3.mp4";
+import video1 from "../../assets/movie.mp4";
+import video2 from "../../assets/food.mp4";
+import video3 from "../../assets/cms.mp4";
 
 function Book() {
   useEffect(() => {
@@ -60,10 +60,10 @@ function Book() {
               <i class="bx bx-home-heart"></i>
             </div>
             <h2>
-              Hello, I'm Nhi. Currently, I'm a student and live in Hanoi,
-              Vietnam. I want to be a web developer. My goal is to become a
-              master html, css, js like the authors on codepen.io. It's a
-              bullshit goal but I'm thoroughly enjoying and loving it.{" "}
+              Hi, I'm Nhi. Currently, I am living in Hanoi, Vietnam. I am a web
+              developer. My goal is to become a master of HTML/CSS, JavaScript
+              like the authors on Codepen.io. It's quite funny but I'm
+              thoroughly enjoying and loving it. &#128155; {" "}
             </h2>
           </div>
         </div>
@@ -109,7 +109,7 @@ function Book() {
               <h1>Skills</h1>
               <br />
               <p> Have basic knowledge of front end:</p>
-              <h3>HTML, CSS, JavaScript, ReactJS.</h3>
+              <h3>HTML, CSS, SASS, JavaScript, ReactJS, Redux</h3>
               <br />
               <p> Worked with:</p>
               <h3>Ant-Design, Material-UI, MongoDB, Github, Linux.</h3>
@@ -150,9 +150,9 @@ function Book() {
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  href="https://blooming-woodland-27991.herokuapp.com/"
+                  href="https://tuyetnhi1607-food-order-app.herokuapp.com/"
                 >
-                  https://blooming-woodland-27991.herokuapp.com/
+                  https://tuyetnhi1607-food-order-app.herokuapp.com/
                 </a>
               </div>
             </div>
@@ -175,9 +175,9 @@ function Book() {
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  href="https://blooming-woodland-27991.herokuapp.com/"
+                  href="https://tuyetnhi1607-movie-app.herokuapp.com/"
                 >
-                  https://blooming-woodland-27991.herokuapp.com/
+                  https://tuyetnhi1607-movie-app.herokuapp.com/
                 </a>
               </div>
             </div>
@@ -191,22 +191,26 @@ function Book() {
               </video>
               <h1>Website CMS</h1>
               <h2>
-In this project, I have designed a CMS website. I made a small backend project myself from NodeJS, MongoDB, ExpressJS to create API with Login, Register, Logout, and product CRUD functions. In the frontend, I use ReactJS, Redux to create layouts like login, register, dashboard, product crud</h2>
+                In this project, I have designed a basic CMS website. I made a small
+                backend project myself from NodeJS, MongoDB, ExpressJS to create
+                API with Login, Register, Logout, and product CRUD functions. In
+                the frontend, I use ReactJS, Redux to create layouts like login,
+                register, dashboard, product crud.
+              </h2>
               <div>
                 <i class="bx bx-link"></i>
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  href="https://blooming-woodland-27991.herokuapp.com/"
+                  href="https://tuyetnhi1607-cms-website.herokuapp.com/"
                 >
-                  https://blooming-woodland-27991.herokuapp.com/
+                  https://tuyetnhi1607-cms-website.herokuapp.com/
                 </a>
               </div>
             </div>
           </div>
-          
         </div>
-      
+
         <div className="book-page-last">
           <div className="contacts-wrapper">
             <h1>Contact me</h1>
